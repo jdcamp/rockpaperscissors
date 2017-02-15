@@ -1,0 +1,37 @@
+<html>
+    <head>
+      <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+      <script type="text/javascript" src="js/scripts.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <title></title>
+    </head>
+    <body>
+        <div class="container">
+            <h4>Rock Paper Scissors</h4>
+            <div class="form-group">
+                <form action="/game-picks" method="post">
+                    <label for="player1">Player 1</label>
+                    <select class="player1" name="player1">
+                        <option value="0">Rock</option>
+                        <option value="1">Paper</option>
+                        <option value="2">Scissors</option>
+                    </select>
+                    <button type="button" name="hide1" class="hide1">Hide</button>
+                    <br>
+                    <label for="player2">Player 2</label>
+                    <select class="player2" name="player2">
+                        <option value="0">Rock</option>
+                        <option value="1">Paper</option>
+                        <option value="2">Scissors</option>
+                    </select>
+                    <button type="button" name="hide2" class="hide2">Hide</button>
+                    <br>
+                    <button type="submit" name="submit" class="btn">Submit</button>
+                </form>
+            </div>
+            <div class="results">
+                {% block results %}{% endblock %}
+            </div>
+        </div>
+    </body>
+</html>
