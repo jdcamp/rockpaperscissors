@@ -1,6 +1,6 @@
 <?php
     class RockPaperScissors {
-
+      //rock =0 paper = 1 and scissors =2
       function playGame($player1, $player2) {
           if ($player1 == $player2) {
             return "Tie";
